@@ -1,0 +1,32 @@
+.sidebar {
+  align-self: flex-start;
+  width: 100%;
+  padding: 11px 33px 122px 33px;
+  @include tablet {
+    max-width: 320px;
+  }
+ 
+  &__news-items {
+    padding: 23px 25px 0 0;
+  }
+	
+  .btn-news {
+    display: inline-block;
+    margin-top: 10px;
+    float: right;
+    @include text($fs-base, 400, $ff-regular, 1.57);
+    text-decoration: underline;
+  }
+}
+
+.news-block {
+  &__item {
+    margin-bottom: 20px;
+    @include text($fs-base, 400, $ff-regular, 1.57);
+
+    &-date {
+      letter-spacing: .35px;
+      font-style: italic;
+    }
+  }
+}

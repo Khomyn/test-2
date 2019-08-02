@@ -1,0 +1,27 @@
+@mixin text($font, $weight, $family,  $line, $color: $white) {
+  font-size: $font;
+  font-family: $family;
+  font-weight: $weight;
+  line-height: $line;
+  color: $color;
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin absolute ($top: auto, $left: auto, $bottom: auto, $right: auto) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}

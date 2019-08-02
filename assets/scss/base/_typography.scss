@@ -1,0 +1,11 @@
+a {
+  text-decoration: none;
+}
+
+h2 {
+  @include text($fs-extra-large, 700, $ff-bold, normal);
+}
+
+strong {
+  font-family: $ff-bold;
+}

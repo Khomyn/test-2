@@ -1,0 +1,5 @@
+# Ignore PhpStorm
+.idea/
+
+# ingnore node modules.
+node_modules/

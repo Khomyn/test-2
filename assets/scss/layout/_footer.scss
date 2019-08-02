@@ -1,0 +1,54 @@
+.footer {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 50px 0 30px;
+  min-height: 220px;
+  max-width: 320px;
+  margin: 0 auto;
+  @include tablet {
+    max-width: none;
+    flex-flow: row nowrap;
+    margin: 0;
+  }
+  
+  &__first,
+  &__second {
+    margin-bottom: 15px;
+    text-align: center;
+    @include tablet {
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+  
+  &__second {
+    @include tablet {
+      margin-left: 16%;
+    }
+  }
+  
+  &__third {
+    @include tablet {
+      margin-left: auto;
+    }
+  
+    &-logo {
+      display: flex;
+      justify-content: center;
+      @include tablet {
+        justify-content: flex-start;
+      }
+    
+      p {
+        margin-left: 9px;
+      }
+    }
+  }
+}
+
+.copyright,
+.copyright a,
+.footer__third-logo {
+  @include text($fs-base, 400, $ff-regular, 1.57);
+  margin-top: -5px;
+}

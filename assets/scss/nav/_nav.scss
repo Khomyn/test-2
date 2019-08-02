@@ -1,0 +1,62 @@
+// Main nav.
+.navigation-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  min-height: 80px;
+  @include tablet {
+    flex-flow: row wrap;
+  }
+	
+  &__item {
+    padding: 10px 0;
+    @include tablet {
+      padding: 0;
+    }
+	  
+    &-link {
+      @include text($fs-base, 400, $ff-regular, 1);
+	    letter-spacing: 0.75px;
+      @include desktop {
+	      font-size: $fs-large;
+      }
+      
+      &:after {
+        content: '';
+        display: none;
+        vertical-align: middle;
+        height: 13px;
+        width: 2px;
+        background: $white;
+	      margin: 0 10px;
+	      @include tablet {
+          display: inline-block;
+	      }
+	      @include desktop {
+          height: 26px;
+          margin: 0 19px;
+        }
+      }
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+	
+    &:last-child &-link:after {
+  	  display: none;
+    }
+  }
+}
+
+// Footer nav.
+.footer-nav {
+  margin-top: -5px;
+	
+  &__item-link {
+    @include text($fs-base, 400, $ff-regular, 1.85);
+    letter-spacing: .35px;
+    text-decoration: underline;
+  }
+}
